@@ -13,15 +13,14 @@ def check_password():
 
 st.title("🔒 Credit Statement Analyzer")
 pwd = st.text_input("กรุณากรอกรหัสผ่านเข้าใช้งาน (Access Password):", type="password")
-if st.button("เข้าสู่ระบบ"):
-if pwd == st.secrets.get("APP_PASSWORD", "1234"):
-st.session_state.authenticated = True
+    if st.button("เข้าสู่ระบบ"):
+    if pwd == st.secrets.get("APP_PASSWORD", "1234"):st.session_state.authenticated = True
 st.rerun()
 else:
 st.error("รหัสผ่านไม่ถูกต้อง")
 return False
 
-if not check_password():
+    if not check_password():
 st.stop()
 
 class MonthlySummary(BaseModel):
@@ -56,10 +55,9 @@ unit_mb = st.checkbox("แสดงตัวเลขในตารางเป
 
 uploaded_file = st.file_uploader("Upload Bank Statement (PDF)", type=["pdf"])
 
-if uploaded_file:
-if st.button("🚀 Analyze Statement", type="primary"):
-api_key = st.secrets.get("GEMINI_API_KEY")
-if not api_key:
+    if uploaded_file:
+    if st.button("🚀 Analyze Statement", type="primary"):api_key = st.secrets.get("GEMINI_API_KEY")
+    if not api_key:
 st.error("ไม่พบ Gemini API Key ในระบบหลังบ้าน กรุณาตั้งค่าใน Streamlit Secrets")
 st.stop()
 
@@ -132,7 +130,7 @@ use_container_width=True,
 hide_index=True
 )
 
-if data.return_cheques and len(data.return_cheques) > 0:
+    if data.return_cheques and len(data.return_cheques) > 0:
 st.subheader(f"⚠️ Return Cheque Summary ({unit_label})")
 df_cheque = pd.DataFrame([
 {
