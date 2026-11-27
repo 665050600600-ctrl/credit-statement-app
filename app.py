@@ -1,2 +1,63 @@
-import base64
-exec(base64.b64decode("aW1wb3J0IHN1YnByb2Nlc3MsIHN5cwp0cnk6CiAgICBpbXBvcnQgcGRmcGx1bWJlcgpleGNlcHQgSW1wb3J0RXJyb3I6CiAgICBzdWJwcm9jZXNzLmNoZWNrX2NhbGwoW3N5cy5leGVjdXRhYmxlLCAiLW0iLCAicGlwIiwgImluc3RhbGwiLCAicGRmcGx1bWJlciJdKQogICAgaW1wb3J0IHBkZnBsdW1iZXIKCmltcG9ydCBzdHJlYW1saXQgYXMgc3QKaW1wb3J0IHBhbmRhcyBhcyBwZAppbXBvcnQgcmUKCnN0LnNldF9wYWdlX2NvbmZpZyhwYWdlX3RpdGxlPSJTdGF0ZW1lbnQgQW5hbHl6ZXIiLCBsYXlvdXQ9IndpZGUiKQpzdC50aXRsZSgi8J+ThCBCYW5rIFN0YXRlbWVudCBBbmFseXplciAoTm8gQVBJKSIpCgp3aXRoIHN0LnNpZGViYXI6CiAgICBiYW5rX2luID0gc3QudGV4dF9pbnB1dCgiQmFuayAvIEJyYW5jaCIsICJLYXNpa29ybmJhbmsgLyBTaWxvbSIpCiAgICBhY2NfdHlwZSA9IHN0LnNlbGVjdGJveCgiVHlwZSIsIFsiUy9BIiwgIkMvQSJdKQogICAgYWNjX251bSA9IHN0LnRleHRfaW5wdXQoIkFjY291bnQgTm8uIiwgIjAxMi0zLTQ1Njc4LTkiKQogICAgYWNjX25hbWUgPSBzdC50ZXh0X2lucHV0KCJBY2NvdW50IE5hbWUiLCAiQUJDIENPLiwgTFRELiIpCiAgICBvZF9saW0gPSBzdC5udW1iZXJfaW5wdXQoIk9EIExpbWl0IChNQikiLCAwLjAsIHN0ZXA9MC41KQogICAgdW5pdF9tYiA9IHN0LmNoZWNrYm94KCJVbml0IGluIE1CIiwgRmFsc2UpCgpwZGZfZmlsZSA9IHN0LmZpbGVfdXBsb2FkZXIoIlVwbG9hZCBQREYgU3RhdGVtZW50IiwgdHlwZT1bInBkZiJdKQoKaWYgcGRmX2ZpbGUgYW5kIHN0LmJ1dHRvbigiQW5hbHl6ZSIpOgogICAgd2l0aCBwZGZwbHVtYmVyLm9wZW4ocGRmX2ZpbGUpIGFzIHBkZjoKICAgICAgICB0eHQgPSAiXG4iLmpvaW4oW3AuZXh0cmFjdF90ZXh0KCkgb3IgIiIgZm9yIHAgaW4gcGRmLnBhZ2VzXSkKICAgIGlmIG5vdCB0eHQuc3RyaXAoKToKICAgICAgICBzdC5lcnJvcigiU2Nhbm5lZCBQREYgaXMgbm90IHN1cHBvcnRlZCB3aXRob3V0IEFQSSBLZXkuIikKICAgICAgICBzdC5zdG9wKCkKICAgIGRhdGEsIHJldF9jLCByZXRfYSwgZW5kX2JhbCA9IHt9LCBbMC4wLCAwXSwgWzAuMCwgMF0sIDAuMAogICAgbV9tYXAgPSB7IjAxIjoiSmFuIiwiMDIiOiJGZWIiLCIwMyI6Ik1hciIsIjA0IjoiQXByIiwiMDUiOiJNYXkiLCIwNiI6Ikp1biIsIjA3IjoiSnVsIiwiMDgiOiJBdWciLCIwOSI6IlNlcCIsIjEwIjoiT2N0IiwiMTEiOiJOb3YiLCIxMiI6IkRlYyJ9CiAgICBmb3IgbGluZSBpbiB0eHQuc3BsaXRsaW5lcygpOgogICAgICAgIG0gPSByZS5tYXRjaChyIl4oXGR7MSwyfSlbLy1dKFxkezEsMn0pWy8tXShcZHsyLDR9KSIsIGxpbmUuc3RyaXAoKSkKICAgICAgICBudW1zID0gcmUuZmluZGFsbChyIlxkW1xkLF0qXC5cZHsyfSIsIGxpbmUpCiAgICAgICAgaWYgbSBhbmQgbGVuKG51bXMpID49IDI6CiAgICAgICAgICAgIG1rID0gZiJ7bV9tYXAuZ2V0KG0uZ3JvdXAoMikuenZpbGwoMiksIG0uZ3JvdXAoMikpfSAyMHttLmdyb3VwKDMpWy0yOl19IgogICAgICAgICAgICBhbXQsIGVuZF9iYWwgPSBmbG9hdChudW1zWy0yXS5yZXBsYWNlKCIsIiwiIikpLCBmbG9hdChudW1zWy0xXS5yZXBsYWNlKCIsIiwiIikpCiAgICAgICAgICAgIGxvdyA9IGxpbmUubG93ZXIoKQogICAgICAgICAgICBpZiBhbnkodyBpbiBsb3cgZm9yIHcgaW4gWyLguKLguK3guJTguKLguIHguKHguLIiLCAiYnJvdWdodCIsICLgupjguKvguYfguITguITguLfguJkiLCAicmV0dXJuIiwgImJvdW5jZSJdKToKICAgICAgICAgICAgICAgIGlmIGFueSh3IGluIGxvdyBmb3IgdyBpbiBbIuC5gOC4iuC5h+C4hOC4hOC4t+C4mSIsICJyZXR1cm4iLCAiYm91bmNlIl0pOgogICAgICAgICAgICAgICAgICAgIHQgPSByZXRfYSBpZiBhbnkodyBpbiBsb3cgZm9yIHcgaW4gWyLguYDguIfguLTguJnguYTguKHguYjguJ7guK0iLCAiaW5zdWZmaWNpZW50Il0pIGVsc2UgcmV0X2MKICAgICAgICAgICAgICAgICAgICB0WzBdICs9IGFtdDsgdFsxXSArPSAxCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBkYXRhLnNldGRlZmF1bHQobWssIFswLjAsIDAsIDAuMCwgMF0pCiAgICAgICAgICAgIGlzX2luID0gYW55KHcgaW4gbG93IGZvciB3IGluIFsi4LmA4LiH4Li04LiZ4LmA4LiC4LmJ4LiyIiwgIuC4o+C4seC4muC5guC4reC4mSIsICJkZXAiLCAiY3IiLCAiaW4iXSkKICAgICAgICAgICAgZGF0YVtta11bMCBpZiBpc19pbiBlbHNlIDJdICs9IGFtdAogICAgICAgICAgICBkYXRhW21rXVsxIGlmIGlzX2luIGVsc2UgM10gKz0gMQogICAgZGl2ID0gMV8wMDBfMDAwIGlmIHVuaXRfbWIgZWxzZSAxCiAgICB1ID0gIk1CIiBpZiB1bml0X21iIGVsc2UgIlRIQiIKICAgIGMxLCBjMiA9IHN0LmNvbHVtbnMoMikKICAgIGMxLm1hcmtkb3duKGYiKipCYW5rIC8gQnJhbmNoOioqIHtiYW5rX2lufVxuXG4qKkFjY291bnQgTmFtZToqKiB7YWNjX25hbWV9IikKICAgIGMyLm1hcmtkb3duKGYiKipBY2NvdW50OioqIHthY2NfdHlwZX0ge2FjY19udW19XG5cbioqT0QgTGltaXQ6Kioge29kX2xpbTosLjJmfSBNQiIpCiAgICBpZiBkYXRhOgogICAgICAgIGRmID0gcGQuRGF0YUZyYW1lKFt7Ik1vbnRoIjprLCBmIkNyZWRpdCAoe3V9KSI6dlswXS9kaXYsICJOby4gQ3JlZGl0Ijp2WzFdLCBmIkRlYml0ICh7dX0pIjp2WzJdL2RpdiwgIk5vLiBEZWJpdCI6dlszXX0gZm9yIGssdiBpbiBkYXRhLml0ZW1zKCldKQogICAgICAgIHN0LmRhdGFmcmFtZShkZiwgdXNlX2NvbnRhaW5lcl93aWR0aD1UcnVlLCBoaWRlX2luZGV4PVRydWUpCiAgICByX3Jvd3MgPSBbXQogICAgaWYgcmV0X2NbMV06IHJfcm93cy5hcHBlbmQoeyJTaWRlIjoiQ3VzdG9tZXIiLCBmIkFtb3VudCAoe3V9KSI6cmV0X2NbMF0vZGl2LCAiVGltZXMiOnJldF9jWzFdfSkKICAgIGlmIHJldF9hWzFdOiByX3Jvd3MuYXBwZW5kKHsiU2lkZSI6IkFwcGxpY2FudCIsIGYiQW1vdW50ICh7dX0pIjpyZXRfYVswXS9kaXYsICJUaW1lcyI6cmV0X2FbMV19KQogICAgaWYgcl9yb3dzOgogICAgICAgIHN0LnN1YmhlYWRlcigiUmV0dXJuIENoZXF1ZSIpCiAgICAgICAgc3QuZGF0YWZyYW1lKHBkLkRhdGFGcmFtZShyX3Jvd3MpLCB1c2VfY29udGFpbmVyX3dpZHRoPVRydWUsIGhpZGVfaW5kZXg9VHJ1ZSkKICAgIHN0Lm1hcmtkb3duKGYiIyMjIEVuZGluZyBCYWxhbmNlOiB7ZW5kX2JhbC9kaXY6LC4yZn0ge3V9IikK"))
+import streamlit as st
+import pypdf
+import pandas as pd
+import re
+
+st.set_page_config(page_title="Statement Analyzer", layout="wide")
+st.title("📄 Bank Statement Analyzer")
+
+with st.sidebar:
+    bank_in = st.text_input("Bank / Branch", "Kasikornbank / Silom")
+    acc_type = st.selectbox("Type", ["S/A", "C/A"])
+    acc_num = st.text_input("Account No.", "012-3-45678-9")
+    acc_name = st.text_input("Account Name", "ABC CO., LTD.")
+    od_lim = st.number_input("OD Limit (MB)", 0.0, step=0.5)
+    unit_mb = st.checkbox("Unit in MB", False)
+
+pdf_file = st.file_uploader("Upload PDF Statement", type=["pdf"])
+
+if pdf_file and st.button("Analyze"):
+    reader = pypdf.PdfReader(pdf_file)
+    txt = "\n".join([(p.extract_text() or "") for p in reader.pages])
+    if not txt.strip():
+        st.error("Scanned PDF is not supported.")
+        st.stop()
+data, ret_c, ret_a, end_bal = {}, [0.0, 0], [0.0, 0], 0.0
+m_map = {"01":"Jan","02":"Feb","03":"Mar","04":"Apr","05":"May","06":"Jun","07":"Jul","08":"Aug","09":"Sep","10":"Oct","11":"Nov","12":"Dec"}
+for line in txt.splitlines():
+    m = re.search(r"\b(\d{1,2})[/-](\d{1,2}|[A-Za-z]{3})[/-](\d{2,4})", line)
+    nums = re.findall(r"\d[\d\s,]*\.\d{2}", line)
+    if m and len(nums) >= 2:
+        mm_raw = m.group(2)
+        mm = m_map.get(mm_raw.zfill(2), mm_raw.capitalize())
+        mk = f"{mm} 20{m.group(3)[-2:]}"
+        amt = float(nums[-2].replace(",","").replace(" ",""))
+        end_bal = float(nums[-1].replace(",","").replace(" ",""))
+        low = line.lower()
+        if any(w in low for w in ["ยอดยกมา", "brought", "เช็คคืน", "return", "bounce"]):
+            if any(w in low for w in ["เช็คคืน", "return", "bounce"]):
+                t = ret_a if any(w in low for w in ["เงินไม่พอ", "insufficient"]) else ret_c
+                t[0] += amt
+                t[1] += 1
+            continue
+        data.setdefault(mk, [0.0, 0, 0.0, 0])
+        is_in = any(w in low for w in ["เงินเข้า", "รับโอน", "dep", "cr", "in", "รับ"])
+        data[mk][0 if is_in else 2] += amt
+        data[mk][1 if is_in else 3] += 1
+div = 1_000_000 if unit_mb else 1
+u = "MB" if unit_mb else "THB"
+c1, c2 = st.columns(2)
+c1.markdown(f"**Bank / Branch:** {bank_in}\n\n**Account Name:** {acc_name}")
+c2.markdown(f"**Account:** {acc_type} {acc_num}\n\n**OD Limit:** {od_lim:,.2f} MB")
+if data:
+    df = pd.DataFrame([{"Month":k, f"Credit ({u})":v[0]/div, "No. Credit":v[1], f"Debit ({u})":v[2]/div, "No. Debit":v[3]} for k,v in data.items()])
+    st.dataframe(df, use_container_width=True, hide_index=True)
+r_rows = []
+if ret_c[1]: r_rows.append({"Side":"Customer", f"Amount ({u})":ret_c[0]/div, "Times":ret_c[1]})
+if ret_a[1]: r_rows.append({"Side":"Applicant", f"Amount ({u})":ret_a[0]/div, "Times":ret_a[1]})
+if r_rows:
+    st.subheader("Return Cheque")
+    st.dataframe(pd.DataFrame(r_rows), use_container_width=True, hide_index=True)
+st.markdown(f"### Ending Balance: {end_bal/div:,.2f} {u}")
+with st.expander("Debug Text"):
+    st.text(txt[:2000])
