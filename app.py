@@ -8,10 +8,8 @@ import pandas as pd
 st.set_page_config(page_title="Credit Statement Analyzer", layout="wide")
 
 def check_password():
-if "authenticated" not in st.session_state:
-st.session_state.authenticated = False
-if st.session_state.authenticated:
-return True
+    if "authenticated" not in st.session_state:st.session_state.authenticated = False
+    if st.session_state.authenticated:return True
 
 st.title("🔒 Credit Statement Analyzer")
 pwd = st.text_input("กรุณากรอกรหัสผ่านเข้าใช้งาน (Access Password):", type="password")
