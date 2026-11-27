@@ -88,7 +88,7 @@ if pdf_file:
                         num_items.append((float(clean_num), x_c))
 
                 if len(num_items) < 2:
-                continue
+                    continue
 
             amt_val, amt_x = num_items[-2]
             bal_val, _ = num_items[-1]
