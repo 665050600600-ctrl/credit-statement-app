@@ -8,21 +8,18 @@ import pandas as pd
 st.set_page_config(page_title="Credit Statement Analyzer", layout="wide")
 
 def check_password():
-if "authenticated" not in st.session_state:
-st.session_state.authenticated = False
-if st.session_state.authenticated:
-return True
+        if "authenticated" not in st.session_state:st.session_state.authenticated = False
+        if st.session_state.authenticated:return True
 st.title("🔒 Credit Statement Analyzer")
 pwd = st.text_input("กรุณากรอกรหัสผ่านเข้าใช้งาน (Access Password):", type="password")
-if st.button("เข้าสู่ระบบ"):
-if pwd == st.secrets.get("APP_PASSWORD", "1234"):
-st.session_state.authenticated = True
+        if st.button("เข้าสู่ระบบ"):
+        if pwd == st.secrets.get("APP_PASSWORD", "1234"):st.session_state.authenticated = True
 st.rerun()
 else:
 st.error("รหัสผ่านไม่ถูกต้อง")
 return False
 
-if not check_password():
+        if not check_password():
 st.stop()
 
 class MonthlySummary(BaseModel):
@@ -57,11 +54,9 @@ unit_mb = st.checkbox("แสดงตัวเลขในตารางเป
 
 uploaded_file = st.file_uploader("Upload Bank Statement (PDF)", type=["pdf"])
 
-if uploaded_file:
-if st.button("🚀 Analyze Statement", type="primary"):
-api_key = st.secrets.get("GEMINI_API_KEY")
-if not api_key:
-st.error("ไม่พบ Gemini API Key ในระบบหลังบ้าน กรุณาตั้งค่าใน Streamlit Secrets")
+        if uploaded_file:
+        if st.button("🚀 Analyze Statement", type="primary"):api_key = st.secrets.get("GEMINI_API_KEY")
+        if not api_key:st.error("ไม่พบ Gemini API Key ในระบบหลังบ้าน กรุณาตั้งค่าใน Streamlit Secrets")
 st.stop()
 with st.spinner("Reading and analyzing PDF statement..."):
 try:
@@ -76,18 +71,8 @@ Analyze this bank statement PDF and extract all details strictly in English.
 - Look carefully for any Returned / Bounced Cheques (เช็คคืน). Classify 'Customer' if a deposited cheque bounced (เช็คฝากเข้าคืน), or 'Applicant' if an issued cheque bounced (เช็คสั่งจ่ายคืน/เงินไม่พอจ่าย).
 - Extract the final Ending Balance.
 """
-response = client.models.generate_content(
-model="gemini-2.5-flash",
-contents=[
-types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
-prompt
-],
-config=types.GenerateContentConfig(
-response_mime_type="application/json",
-response_schema=StatementData,
-temperature=0.1,
-),
-)
+response = client.models.generate_content(model="gemini-2.5-flash",contents=[types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),prompt],
+config=types.GenerateContentConfig(response_mime_type="application/json",response_schema=StatementData,temperature=0.1,),)
 data = StatementData.model_validate_json(response.text)
 od_display = manual_od if manual_od > 0 else data.od_limit_mb
 divisor = 1_000_000 if unit_mb else 1
@@ -113,7 +98,7 @@ f"Credit ({unit_label})": m.credit_amount / divisor,
 f"Debit ({unit_label})": m.debit_amount / divisor,
 "No. of Debit": m.debit_count,
 }
-for m in data.monthly_data
+          for m in data.monthly_data
 ])
 st.dataframe(
 df_monthly.style.format({
@@ -123,7 +108,7 @@ f"Debit ({unit_label})": "{:,.2f}",
 use_container_width=True,
 hide_index=True
 )
-if data.return_cheques and len(data.return_cheques) > 0:
+          if data.return_cheques and len(data.return_cheques) > 0:
 st.subheader(f"⚠️ Return Cheque Summary ({unit_label})")
 df_cheque = pd.DataFrame([
 {
