@@ -100,13 +100,13 @@ unit_label = "MB" if unit_mb else "THB"
 
 st.divider()
 
-col_left1, col_right1 = st.columns()
+col_left1, col_right1 = st.columns(2)
 with col_left1:
 st.markdown(f"**Bank / Branch:** {data.bank_name} / {data.branch_name}")
 with col_right1:
 st.markdown(f"**Account:** {data.account_type} {data.account_number}")
 
-col_left2, col_right2 = st.columns()
+col_left2, col_right2 = st.columns(2)
 with col_left2:
 st.markdown(f"**Account Name:** {data.account_name}")
 with col_right2:
